@@ -21,6 +21,7 @@
 ## 解决方法
 ### 1、如何使用Volatility框架实现对虚拟机的内存取证？　　
 * ### 思路 　　
+
     volatility的标准用法是针对镜像文件的，但是将 volatility 配合 pyvmi 使用，就可以直接重构运行虚拟机的内存，而不用转储成文件后再重构。
 * ### 实现　　　
   - 安装pycharm，克隆volatility工程（JavaMemory——volatility-2.6）到本地
