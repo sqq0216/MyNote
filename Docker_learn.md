@@ -18,6 +18,6 @@ DockerFile书写错误，以下两条语句中的两个路径要保持一致
 * 运行容器－sudo docker --name test threadtest/v:2(下一次可直接通过sudo docker container start test启动该容器)
 * 进入容器内部查看容器中的进程信息-sudo docker exec tst ps -ef　　
 * 在宿主机中查看容器中的进程信息-sudo docker top test　　　
-* 在宿主机端以树形式查看容器进程id结构信息－pstree -p 801（pid of congtainerd）
+* 在宿主机端以树形式查看容器进程id结构信息－pstree -p 801（pid of congtainerd）可以查看到容器中的进程id，将此ｐｉｄ替换linux_runtime中的task.pid运行报错：sun.jvm.hotspot.debugger.NoSuchSymbolException: Could not find symbol "gHotSpotVMTypeEntryTypeNameOffset" in any of the known library names
 
 
