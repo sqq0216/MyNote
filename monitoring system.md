@@ -21,4 +21,17 @@
 
 - 制作本地profiel文件，放在volatility相关目录下
 　　
-- 通过LiME工具获取本地内存镜像，具体步骤详见［LiME使用］(https://www.jianshu.com/p/5f13ee20f5b0)
+- 通过LiME工具获取本地内存镜像，具体步骤详见［LiME使用］(https://www.jianshu.com/p/5f13ee20f5b0) 
+
+  - 遇到的问题：insmod error:can't insert moduel lime-4.15.0-20-generic.ko
+  - 解决:make clean 之后重新make制作镜像
+
+- 重新制作ubuntu.lime文件的步骤：　　
+
+  - rm ~/images／ubuntu.lime
+  - cd ~/Cprojects/LIME/LiME/src
+  - make clean
+  - rm lime-4.15.0-20-generic.ko
+  - make
+  - cd /
+  - sudo insmod /home/sqq/Cprojects/LIME/LiME/src/lime-4.15.0-20-generic.ko "path=/home/sqq/ubuntu3.lime format=lime"
